@@ -41,6 +41,7 @@ body.light-theme {
 .app {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 @media screen and (min-width: 600px) {
