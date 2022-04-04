@@ -1,0 +1,59 @@
+:root {
+  --main-bg-color: hsl(235, 21%, 11%);
+  --element-color: hsl(235, 24%, 19%);
+  --text: hsl(234, 39%, 85%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 18px;
+}
+
+body {
+  background-image: url("./assets/bg-mobile-dark.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: var(--main-bg-color);
+  width: 90%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  padding-top: 15%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body.light-theme {
+  background-image: url("./assets/bg-mobile-light.jpg");
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-image: url("./assets/bg-desktop-dark.jpg");
+    padding-top: 5.5%;
+  }
+
+  body.light-theme {
+    background-image: url("./assets/bg-desktop-light.jpg");
+  }
+
+  .app {
+    width: 540px;
+  }
+}
