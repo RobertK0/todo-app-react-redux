@@ -1,3 +1,16 @@
+:root {
+  --main-bg-color: hsl(235, 21%, 11%);
+  --element-color: hsl(235, 24%, 19%);
+  --text: hsl(234, 39%, 85%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
 .App {
   text-align: center;
 }
