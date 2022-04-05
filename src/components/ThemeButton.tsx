@@ -12,6 +12,7 @@ const ThemeToggle = function () {
   const toggleHandler = function (event: any) {
     dispatch(uiActions.toggleTheme(event.target.value));
   };
+  console.log(theme);
 
   return (
     <fieldset onChange={toggleHandler}>
@@ -20,20 +21,28 @@ const ThemeToggle = function () {
           type="radio"
           name="theme"
           value="dark"
-          className={styles.radio}
+          className={`${styles.radio}`}
           defaultChecked={theme === "dark" ? true : false}
         />
-        <SunIcon />
+        <SunIcon
+          classes={
+            theme === "light" ? styles.visible : styles.hidden
+          }
+        />
       </label>
       <label className={styles.label}>
         <input
           type="radio"
           name="theme"
           value="light"
-          className={styles.radio}
+          className={`${styles.radio}`}
           defaultChecked={theme === "light" ? true : false}
         />
-        <MoonIcon />
+        <MoonIcon
+          classes={
+            theme === "dark" ? styles.visible : styles.hidden
+          }
+        />
       </label>
     </fieldset>
   );

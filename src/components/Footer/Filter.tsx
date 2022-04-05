@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { taskActions } from "../../store";
 import styles from "./Filter.module.css";

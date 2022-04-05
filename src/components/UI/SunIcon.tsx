@@ -1,8 +1,13 @@
 // import styles from "./SunIcon.module.css";
 
-const SunIcon = function () {
+const SunIcon = function (props: any) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+    <svg
+      className={props.classes}
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+    >
       <path
         fill="#FFF"
         fill-rule="evenodd"
