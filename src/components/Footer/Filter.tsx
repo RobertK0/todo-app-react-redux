@@ -7,14 +7,15 @@ const Filter = function () {
   const dispatch = useDispatch();
 
   const filterHandler = function (event: any) {
-    if (event.target.type === "button")
+    if (event.target.type === "button") {
       dispatch(
         taskActions.applyFilter(
           JSON.parse(event.target.dataset.filter)
         )
       );
+    }
   };
-
+  //TODO I should do these with radio buttons
   return (
     <Fragment>
       <div
