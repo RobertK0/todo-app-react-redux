@@ -61,6 +61,8 @@ const tasksSlice = createSlice({
       );
       if (!task) return;
       task.checked = !task?.checked;
+
+      persistState(current(state).tasks);
     },
     applyFilter(state, action) {
       state.filter = action.payload;
