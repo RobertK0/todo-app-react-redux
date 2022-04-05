@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/todo-app-react-redux/static/css/main.3639a67e.css",
-    "main.js": "/todo-app-react-redux/static/js/main.c8ab4ecc.js",
+    "main.css": "/todo-app-react-redux/static/css/main.77b274aa.css",
+    "main.js": "/todo-app-react-redux/static/js/main.5dbc7915.js",
     "static/media/bg-desktop-light.jpg": "/todo-app-react-redux/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
     "static/media/bg-desktop-dark.jpg": "/todo-app-react-redux/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
     "index.html": "/todo-app-react-redux/index.html",
-    "main.3639a67e.css.map": "/todo-app-react-redux/static/css/main.3639a67e.css.map",
-    "main.c8ab4ecc.js.map": "/todo-app-react-redux/static/js/main.c8ab4ecc.js.map"
+    "main.77b274aa.css.map": "/todo-app-react-redux/static/css/main.77b274aa.css.map",
+    "main.5dbc7915.js.map": "/todo-app-react-redux/static/js/main.5dbc7915.js.map"
   },
   "entrypoints": [
-    "static/css/main.3639a67e.css",
-    "static/js/main.c8ab4ecc.js"
+    "static/css/main.77b274aa.css",
+    "static/js/main.5dbc7915.js"
   ]
 }
