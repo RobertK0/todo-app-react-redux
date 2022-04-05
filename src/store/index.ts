@@ -1,4 +1,8 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import {
+  configureStore,
+  createSlice,
+  current,
+} from "@reduxjs/toolkit";
 
 export type Task = {
   id: string;
@@ -27,6 +31,10 @@ const initialTasks: Task[] = JSON.parse(
   },
 ];
 
+const persistState = function (state: Task[]) {
+  localStorage.setItem("todo_list", JSON.stringify(state));
+};
+
 const tasksSlice = createSlice({
   name: "task",
   initialState: { tasks: initialTasks, filter: null },
@@ -37,11 +45,15 @@ const tasksSlice = createSlice({
         text: action.payload,
         checked: false,
       });
+
+      persistState(current(state).tasks);
     },
     remove(state, action) {
       state.tasks = state.tasks.filter(
         (task) => task.id !== action.payload
       );
+
+      persistState(current(state).tasks);
     },
     toggleCheck(state, action) {
       const task = state.tasks.find(
@@ -57,6 +69,8 @@ const tasksSlice = createSlice({
       state.tasks = state.tasks.filter(
         (task) => task.checked !== true
       );
+
+      persistState(current(state).tasks);
     },
   },
 });
