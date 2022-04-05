@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { taskActions } from "../../store";
 import styles from "./Filter.module.css";
 
-const Filter = function () {
+const Filter = function (props: any) {
   const dispatch = useDispatch();
 
   const filterHandler = function (event: any) {
@@ -13,7 +13,7 @@ const Filter = function () {
   };
   //TODO I should do these with radio buttons
   return (
-    <Fragment>
+    <div className={props.classes}>
       <fieldset
         className={styles["filter-container"]}
         onChange={filterHandler}
@@ -47,7 +47,7 @@ const Filter = function () {
           <span>Completed</span>
         </label>
       </fieldset>
-    </Fragment>
+    </div>
   );
 };
 

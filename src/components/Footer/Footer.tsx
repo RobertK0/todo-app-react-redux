@@ -6,9 +6,9 @@ import styles from "./Footer.module.css";
 const Footer = function () {
   return (
     <div className={styles["action-bar"]}>
-      <Counter />
-      <Filter />
-      <ClearBtn />
+      <Counter classes={styles.counter} />
+      <Filter classes={styles.filter} />
+      <ClearBtn classes={styles.clear} />
     </div>
   );
 };

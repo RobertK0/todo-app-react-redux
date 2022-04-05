@@ -2,6 +2,25 @@
   color: hsl(234, 11%, 52%);
   font-size: 0.8rem;
   display: grid;
-  grid-row-gap: 10px;
-  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .action-bar {
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .counter {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .filter {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+  .clear {
+    grid-column: 3;
+    grid-row: 1;
+  }
 }
