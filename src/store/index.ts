@@ -53,6 +53,11 @@ const tasksSlice = createSlice({
     applyFilter(state, action) {
       state.filter = action.payload;
     },
+    clearCompleted(state) {
+      state.tasks = state.tasks.filter(
+        (task) => task.checked !== true
+      );
+    },
   },
 });
 
