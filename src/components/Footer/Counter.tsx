@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Task } from "../../store";
-import styles from "./Counter.module.css";
+// import styles from "./Counter.module.css";
 
 const Counter = function () {
   //TODO :any

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { taskActions, uiActions } from "../store";
+import { uiActions } from "../store";
 import styles from "./ThemeButton.module.css";
 import MoonIcon from "./UI/MoonIcon";
 import SunIcon from "./UI/SunIcon";
@@ -15,20 +15,22 @@ const ThemeToggle = function () {
 
   return (
     <fieldset onChange={toggleHandler}>
-      <label>
+      <label className={styles.label}>
         <input
           type="radio"
           name="theme"
           value="dark"
+          className={styles.radio}
           defaultChecked={theme === "dark" ? true : false}
         />
         <SunIcon />
       </label>
-      <label>
+      <label className={styles.label}>
         <input
           type="radio"
           name="theme"
           value="light"
+          className={styles.radio}
           defaultChecked={theme === "light" ? true : false}
         />
         <MoonIcon />

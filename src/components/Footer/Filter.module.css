@@ -8,14 +8,24 @@
 }
 
 .filter-selection {
-  margin: 0 10px;
+  height: 0;
+  width: 0;
 }
 
 .filter-selection:hover {
   color: var(--text);
 }
 
-.active-filter {
+.filter-selection + span {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.filter-selection + span:hover {
+  color: var(--text);
+}
+
+.filter-selection:checked + span {
   color: hsl(220, 98%, 61%);
   font-weight: 700;
 }

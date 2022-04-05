@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { taskActions } from "../../store";
-import styles from "./ClearBtn.module.css";
+// import styles from "./ClearBtn.module.css";
 
 const ClearBtn = function () {
   const dispatch = useDispatch();

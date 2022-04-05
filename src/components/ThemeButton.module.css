@@ -1,0 +1,15 @@
+.radio {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  cursor: pointer;
+  display: none;
+}
+
+.visible {
+  display: block;
+}

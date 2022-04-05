@@ -1,4 +1,4 @@
-import styles from "./SunIcon.module.css";
+// import styles from "./SunIcon.module.css";
 
 const SunIcon = function () {
   return (

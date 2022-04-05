@@ -7,7 +7,6 @@
   font-size: 0.97rem;
   border-bottom: 1px solid hsl(237, 14%, 26%);
   color: var(--text);
-  transition: all 0.2s;
 }
 
 .task:hover {
