@@ -18,32 +18,32 @@ const Filter = function () {
   //TODO I should do these with radio buttons
   return (
     <Fragment>
-      <div
+      <fieldset
         className={styles["filter-container"]}
         onClick={filterHandler}
       >
-        <button
-          type="button"
-          className={`${styles["filter-selection"]} ${styles["active-filter"]}`}
-          data-filter="null"
-        >
-          All
-        </button>
-        <button
-          type="button"
+        <label>
+          <input
+            type="radio"
+            className={`${styles["filter-selection"]} ${styles["active-filter"]}`}
+            data-filter="null"
+          />
+          <span>All</span>
+        </label>
+        <input
+          type="radio"
           className={styles["filter-selection"]}
           data-filter="false"
-        >
-          Active
-        </button>
-        <button
-          type="button"
+        />
+        <span>Active</span>
+
+        <input
+          type="radio"
           className={styles["filter-selection"]}
           data-filter="true"
-        >
-          Completed
-        </button>
-      </div>
+        />
+        <span>Completed</span>
+      </fieldset>
     </Fragment>
   );
 };

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { taskActions, uiActions } from "../store";
-import styles from "./ThemeToggle.module.css";
+import styles from "./ThemeButton.module.css";
 import MoonIcon from "./UI/MoonIcon";
 import SunIcon from "./UI/SunIcon";
 
