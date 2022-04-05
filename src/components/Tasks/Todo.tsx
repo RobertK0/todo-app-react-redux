@@ -6,14 +6,20 @@ import { useDispatch } from "react-redux";
 
 const Todo = function (props: { task: Task }) {
   const dispatch = useDispatch();
+
   const removeHandler = function () {
     dispatch(taskActions.remove(props.task.id));
+  };
+
+  const checkHandler = function () {
+    dispatch(taskActions.toggleCheck(props.task.id));
+    console.log("yay");
   };
 
   return (
     <li className={styles.task}>
       <fieldset>
-        <label>
+        <label onChange={checkHandler}>
           <input type="checkbox" className={styles.checkbox} />
 
           <CheckIcon visible={props.task.checked ? true : false} />

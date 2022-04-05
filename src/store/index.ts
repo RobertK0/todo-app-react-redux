@@ -43,7 +43,13 @@ const tasksSlice = createSlice({
         (task) => task.id !== action.payload
       );
     },
-    toggleCheck(state) {},
+    toggleCheck(state, action) {
+      const task = state.tasks.find(
+        (task) => task.id === action.payload
+      );
+      if (!task) return;
+      task.checked = !task?.checked;
+    },
   },
 });
 
