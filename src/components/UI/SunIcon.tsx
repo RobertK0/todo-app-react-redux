@@ -1,3 +1,5 @@
+import styles from "./SunIcon.module.css";
+
 const SunIcon = function () {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">

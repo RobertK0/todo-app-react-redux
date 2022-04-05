@@ -37,7 +37,10 @@ const persistState = function (state: Task[]) {
 
 const tasksSlice = createSlice({
   name: "task",
-  initialState: { tasks: initialTasks, filter: null },
+  initialState: {
+    tasks: initialTasks,
+    filter: null,
+  },
   reducers: {
     add(state, action) {
       state.tasks.push({
@@ -77,8 +80,21 @@ const tasksSlice = createSlice({
   },
 });
 
-const store = configureStore({ reducer: tasksSlice.reducer });
+const uiSlice = createSlice({
+  name: "ui",
+  initialState: { theme: "dark" },
+  reducers: {
+    toggleTheme(state, action) {
+      state.theme = action.payload;
+    },
+  },
+});
+
+const store = configureStore({
+  reducer: { tasks: tasksSlice.reducer, ui: uiSlice.reducer },
+});
 
 export const taskActions = tasksSlice.actions;
+export const uiActions = uiSlice.actions;
 
 export default store;

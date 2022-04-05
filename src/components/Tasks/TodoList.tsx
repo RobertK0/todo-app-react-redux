@@ -6,9 +6,9 @@ import { Fragment } from "react";
 
 const TodoList = function () {
   //TODO update this type once I understand how it behaves
-  const tasks = useSelector((state: any) => state.tasks);
-  const filter = useSelector((state: any) => state.filter);
-  console.log(filter);
+  const tasks = useSelector((state: any) => state.tasks.tasks);
+  const filter = useSelector((state: any) => state.tasks.filter);
+  console.log(tasks);
 
   const filteredTasks = tasks.map((task: Task) => {
     if (filter === null) return <Todo key={task.id} task={task} />;
