@@ -7,42 +7,45 @@ const Filter = function () {
   const dispatch = useDispatch();
 
   const filterHandler = function (event: any) {
-    if (event.target.type === "button") {
-      dispatch(
-        taskActions.applyFilter(
-          JSON.parse(event.target.dataset.filter)
-        )
-      );
-    }
+    dispatch(
+      taskActions.applyFilter(JSON.parse(event.target.value))
+    );
   };
   //TODO I should do these with radio buttons
   return (
     <Fragment>
       <fieldset
         className={styles["filter-container"]}
-        onClick={filterHandler}
+        onChange={filterHandler}
       >
         <label>
           <input
             type="radio"
+            name="filter"
             className={`${styles["filter-selection"]} ${styles["active-filter"]}`}
-            data-filter="null"
+            value="null"
+            defaultChecked
           />
           <span>All</span>
         </label>
-        <input
-          type="radio"
-          className={styles["filter-selection"]}
-          data-filter="false"
-        />
-        <span>Active</span>
-
-        <input
-          type="radio"
-          className={styles["filter-selection"]}
-          data-filter="true"
-        />
-        <span>Completed</span>
+        <label>
+          <input
+            type="radio"
+            name="filter"
+            className={styles["filter-selection"]}
+            value="false"
+          />
+          <span>Active</span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="filter"
+            className={styles["filter-selection"]}
+            value="true"
+          />
+          <span>Completed</span>
+        </label>
       </fieldset>
     </Fragment>
   );
