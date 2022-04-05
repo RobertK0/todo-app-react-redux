@@ -80,12 +80,25 @@ const tasksSlice = createSlice({
   },
 });
 
+const initialUIState = JSON.parse(
+  //@ts-ignore
+  localStorage.getItem("todo_theme")
+) || { theme: "dark" };
+
+document.body.dataset.theme = initialUIState.theme;
+
 const uiSlice = createSlice({
   name: "ui",
-  initialState: { theme: "dark" },
+  initialState: initialUIState,
   reducers: {
     toggleTheme(state, action) {
       state.theme = action.payload;
+      //Wondering if this is wrong, seems to work though
+      document.body.dataset.theme = current(state).theme;
+      localStorage.setItem(
+        "todo_theme",
+        JSON.stringify(current(state))
+      );
     },
   },
 });

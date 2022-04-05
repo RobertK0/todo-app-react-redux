@@ -4,6 +4,12 @@
   --text: hsl(234, 39%, 85%);
 }
 
+[data-theme="light"] {
+  --main-bg-color: hsl(0, 0%, 100%);
+  --element-color: hsl(0, 0%, 100%);
+  --text: hsl(235, 19%, 35%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +40,7 @@ body {
   overflow-y: scroll;
 }
 
-body.light-theme {
+body[data-theme="light"] {
   background-image: url("./assets/bg-mobile-light.jpg");
 }
 
@@ -50,7 +56,7 @@ body.light-theme {
     padding-top: 5.5%;
   }
 
-  body.light-theme {
+  body[data-theme="light"] {
     background-image: url("./assets/bg-desktop-light.jpg");
   }
 
