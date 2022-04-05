@@ -1,12 +1,12 @@
 import styles from "./CrossIcon.module.css";
 
-const CrossIcon = function () {
+const CrossIcon = function (props: { classes: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
-      className={styles.cross}
+      className={`${styles.cross} ${props.classes}`}
     >
       <path
         fill="#494C6B"

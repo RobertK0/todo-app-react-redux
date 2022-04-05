@@ -10,12 +10,14 @@ const ThemeToggle = function () {
   const theme = useSelector((state) => state.ui.theme);
 
   const toggleHandler = function (event: any) {
-    dispatch(uiActions.toggleTheme(event.target.value));
+    //Prevents radio button default behavior, instead toggles theme on every click, as usually the unchecked radio button is hidden and it messes with the accessibility
+    event.preventDefault();
+    dispatch(uiActions.toggleTheme());
   };
   console.log(theme);
 
   return (
-    <fieldset onChange={toggleHandler}>
+    <fieldset onClick={toggleHandler}>
       <label className={styles.label}>
         <input
           type="radio"
@@ -25,9 +27,9 @@ const ThemeToggle = function () {
           defaultChecked={theme === "dark" ? true : false}
         />
         <SunIcon
-          classes={
-            theme === "light" ? styles.visible : styles.hidden
-          }
+          classes={` ${
+            theme === "dark" ? styles.visible : styles.hidden
+          } ${styles.icon}`}
         />
       </label>
       <label className={styles.label}>
@@ -39,9 +41,9 @@ const ThemeToggle = function () {
           defaultChecked={theme === "light" ? true : false}
         />
         <MoonIcon
-          classes={
-            theme === "dark" ? styles.visible : styles.hidden
-          }
+          classes={`${
+            theme === "light" ? styles.visible : styles.hidden
+          } ${styles.icon}`}
         />
       </label>
     </fieldset>

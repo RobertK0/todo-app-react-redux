@@ -91,9 +91,10 @@ const uiSlice = createSlice({
   name: "ui",
   initialState: initialUIState,
   reducers: {
-    toggleTheme(state, action) {
-      state.theme = action.payload;
-      //Wondering if this is wrong, seems to work though
+    toggleTheme(state) {
+      if (current(state).theme === "dark") state.theme = "light";
+      else if (current(state).theme === "light")
+        state.theme = "dark";
       document.body.dataset.theme = current(state).theme;
       localStorage.setItem(
         "todo_theme",

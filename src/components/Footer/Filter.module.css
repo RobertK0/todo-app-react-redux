@@ -7,6 +7,10 @@
   transition: 0.5s;
 }
 
+.filter-selection:focus-visible + span {
+  box-shadow: 0 0 0 0.8rem rgb(253 242 233 / 50%);
+}
+
 .filter-selection {
   height: 0;
   width: 0;

@@ -10,16 +10,14 @@ function App() {
   const theme = useSelector((state) => state.ui.theme);
 
   return (
-    <main className={styles.main} data-theme={theme}>
-      <div className={styles.app} data-theme={theme}>
-        <Header />
-        <Card>
-          <InputForm />
-        </Card>
-        <Card>
-          <TaskContainer />
-        </Card>
-      </div>
+    <main className={styles.app} data-theme={theme}>
+      <Header />
+      <Card>
+        <InputForm />
+      </Card>
+      <Card>
+        <TaskContainer />
+      </Card>
     </main>
   );
 }

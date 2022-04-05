@@ -1,7 +1,10 @@
 import styles from "./CheckIcon.module.css";
 
-const CheckIcon = function (props: { visible: boolean }) {
-  const classes = `${styles.check} ${
+const CheckIcon = function (props: {
+  visible: boolean;
+  classes: string;
+}) {
+  const classes = `${props.classes} ${styles.check} ${
     props.visible ? styles.checked : ""
   }`;
 

@@ -21,7 +21,10 @@ const Todo = function (props: { task: Task }) {
         <label onChange={checkHandler}>
           <input type="checkbox" className={styles.checkbox} />
 
-          <CheckIcon visible={props.task.checked ? true : false} />
+          <CheckIcon
+            classes={styles.icon}
+            visible={props.task.checked ? true : false}
+          />
 
           <span
             className={props.task.checked ? styles.checked : ""}
@@ -31,7 +34,7 @@ const Todo = function (props: { task: Task }) {
         </label>
         <label className={styles.remove}>
           <button onClick={removeHandler}>
-            <CrossIcon />
+            <CrossIcon classes={styles["remove-btn"]} />
           </button>
         </label>
       </fieldset>
