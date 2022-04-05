@@ -1,0 +1,41 @@
+.task {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 19.5px 22px;
+  background-color: inherit;
+  font-size: 0.97rem;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  color: var(--text);
+}
+
+.task input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.task fieldset {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+}
+
+.remove {
+  margin-left: auto;
+}
+
+.remove button {
+  margin-left: auto;
+  background-color: transparent;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: rgb(156, 156, 156);
+}

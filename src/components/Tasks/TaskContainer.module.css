@@ -1,0 +1,8 @@
+.todo-container {
+  background-color: var(--element-color);
+
+  border-radius: 5px;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  transition: all 0.5s;
+}

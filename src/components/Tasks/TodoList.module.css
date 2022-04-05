@@ -1,0 +1,4 @@
+.checked {
+  text-decoration: line-through;
+  color: rgb(156, 156, 156);
+}

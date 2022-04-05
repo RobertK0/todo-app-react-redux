@@ -1,0 +1,19 @@
+.check {
+  cursor: pointer;
+  stroke: transparent;
+  padding: 8px 7px;
+  margin-right: 25px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  color: transparent;
+}
+
+.checked {
+  stroke: #fff;
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  border: 1px solid transparent;
+}

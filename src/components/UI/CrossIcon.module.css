@@ -1,0 +1,7 @@
+.cross {
+  cursor: pointer;
+  opacity: 1;
+  background-color: transparent;
+  margin-left: auto;
+  transition: 0.3s;
+}
