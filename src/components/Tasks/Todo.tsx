@@ -13,7 +13,6 @@ const Todo = function (props: { task: Task }) {
 
   const checkHandler = function () {
     dispatch(taskActions.toggleCheck(props.task.id));
-    console.log("yay");
   };
 
   return (

@@ -1,0 +1,7 @@
+.action-bar {
+  color: hsl(234, 11%, 52%);
+  font-size: 0.8rem;
+  display: grid;
+  grid-row-gap: 10px;
+  justify-content: space-between;
+}
