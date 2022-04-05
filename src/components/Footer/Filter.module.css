@@ -1,0 +1,27 @@
+.filter-container {
+  display: flex;
+  justify-content: center;
+  grid-column: span 3;
+  padding: 20px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.filter-selection {
+  margin: 0 10px;
+}
+
+.filter-selection:hover {
+  color: var(--text);
+}
+
+.active-filter {
+  color: hsl(220, 98%, 61%);
+  font-weight: 700;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}

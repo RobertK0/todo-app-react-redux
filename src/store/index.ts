@@ -29,7 +29,7 @@ const initialTasks: Task[] = JSON.parse(
 
 const tasksSlice = createSlice({
   name: "task",
-  initialState: { tasks: initialTasks },
+  initialState: { tasks: initialTasks, filter: null },
   reducers: {
     add(state, action) {
       state.tasks.push({
@@ -49,6 +49,9 @@ const tasksSlice = createSlice({
       );
       if (!task) return;
       task.checked = !task?.checked;
+    },
+    applyFilter(state, action) {
+      state.filter = action.payload;
     },
   },
 });
